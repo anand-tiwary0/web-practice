@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <form
+      action="https://httpbin.org/get"
+      method="get"
+      enctype="application/x-www-form-urlencoded"
+      accept-charset="UTF-8"
+      autocomplete="on"
+      id="myform"
+    >
+      <fieldset form="myform">
+        <legend>our form</legend>
+        <label for="price-range"></label>
+        <input
+          type="range"
+          name="price"
+          value="0"
+          id="price-range"
+          min="100"
+          max="1000"
+          step="50"
+        />
+        <output for="price-range" id="prince-output">0</output>
+      </fieldset>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
