@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  border: 3px solid red;
+  display: grid;
+  height: 600px;
+  width: 600px;
+  grid-template-rows : repeat(4,100px);
+  grid-template-columns: repeat(autofit,minmax(100px,1fr));
+}
+
+.item{
+  background-color: palegoldenrod;
+  border: 2px solid lightpink;
+}
+
+.item-1{
+  grid-row: 1/2;
+  grid-column: 1/4;
+}
+.item-2{
+
+}
+
