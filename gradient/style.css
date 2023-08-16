@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bigbox {
+  width: 500px;
+  height: 500px;
+  border: 2px solid black;
+  /* background-image: linear-gradient(direction,color stopvalue, color stopvalur); */
+  /* background-image: linear-gradient(to top, red 50%, blue 50%); */
+  /* background-image: linear-gradient(
+    to top,
+    green 33%,
+    white 33% 66%,
+    orange 66%
+  ); */
+  /* background-image: linear-gradient(to left, red 10%,blue 10% 20%,red 20% 30%,blue 30% 40%,); */
+  /* background-image: radial-gradient(red 50%, blue 50%);
+ */
+  background-image: repeating-radial-gradient(red 0px 10px, blue 10px 20px);
+}
