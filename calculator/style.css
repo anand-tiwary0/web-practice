@@ -1,0 +1,41 @@
+/*CSS RESET*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+  background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+
+.calculator {
+  border: 5px solid black;
+  border-radius: 12px;
+  box-shadow: 1em 1em 1em 1em rgb(202, 139, 139),
+    -1em -1em 1em 1em rgb(202, 139, 139);
+}
+
+#inputfield {
+  width: 7.5rem;
+  height: 2rem;
+  padding: 1em;
+  border: 2px solid black;
+  border-radius: 5%;
+}
+
+button {
+  height: 2em;
+  width: 2em;
+  border-radius: 20%;
+}
+
+#eqlbtn {
+  background-color: orange;
+}
