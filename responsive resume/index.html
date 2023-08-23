@@ -72,7 +72,7 @@
 
   <main class="bd-container l-main">
     <!--all element in this div is generated in pdf-->
-    <div class="resume">
+    <div class="resume" id="area-cv">
       <div class="resume__left">
         <!-- home  part-->
         <section class="home" id="home">
@@ -99,14 +99,14 @@
                 <i class='bx bx-envelope home__icon' ></i>nonmityslayer@tutanota.com
               </span>
               <span class="home__information">
-                <i class='bx bx-phone home__icon' title="Theme" id="theme-button"></i>7323912927
+                <i class='bx bx-phone home__icon' ></i>7323912927
               </span>
             </div>
           </div>
-          
           <!-- theme change button -->
-          <i class="bx bx-moon change-theme"></i>
+          <i class="bx bx-moon change-theme" title="Theme" id="theme-button"></i>
           <!-- button to generate and download pdf available at desktop version -->
+          <i class="bx bx-download generate-pdf" title="Generate PDF" id="resume-button"></i>
         </section>
 
 
@@ -244,7 +244,8 @@
               <div class="experience__data bd-grid">
                 <h3 class="experience__title">web development</h3>
                 <span class="experience__company">From 2013 to 2015 | tech x comperelr</span>
-                <p class="experience__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia similique itaque non quas possimus quasi est voluptatibus omnis iure! Beatae obcaecati officiis quasi eligendi at porro qui quisquam non eveniet! Voluptate, qui harum. Aliquid architecto distinctio, tempora fugit in voluptatem repellat odit illo ab fuga suscipit quibusdam quaerat doloremque nisi cum molestias doloribus et vitae. Possimus ex cupiditate omnis delectus?</p>
+                <p class="experience__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia similique itaque non quas possimus quasi est voluptatibus omnis iure! Beatae obcaecati officiis quasi eligendi at porro qui quisquam non eveniet! Voluptate, qui harum. Aliquid architecto distinctio, tempora fugit in voluptatem repellat odit illo ab fuga suscipit quibusdam quaerat doloremque nisi cum molestias doloribus et vitae. Possimus ex cupiditate omnis delectus?
+                </p>
               </div>
             </div>
 
@@ -381,6 +382,7 @@
 
 
     <!-- script-->
+    <script src="js/html2pdf.bundle.min.js"></script>
     <script src="js/main.js"></script>
 
     </div>

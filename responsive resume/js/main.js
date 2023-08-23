@@ -1,5 +1,7 @@
 // show-menu
 
+const { html2pdf } = require("./html2pdf.bundle.min");
+
 const showMenu = (toogleId, navId) => {
   const toggle = document.getElementById(toogleId),
     nav = document.getElementById(navId);
@@ -79,24 +81,19 @@ function scrollTop() {
 window.addEventListener("scroll", scrollTop);
 
 //dark and light theme
-/*==================== DARK LIGHT THEME ====================*/
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
 const iconTheme = "bx-sun";
 
-// Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem("selected-theme");
 const selectedIcon = localStorage.getItem("selected-icon");
 
-// We obtain the current theme that the interface has by validating the dark-theme class
 const getCurrentTheme = () =>
   document.body.classList.contains(darkTheme) ? "dark" : "light";
-const getCurrentIcon = () =>
+const getcurrentIcon = () =>
   themeButton.classList.contains(iconTheme) ? "bx-moon" : "bx-sun";
 
-// We validate if the user previously chose a topic
 if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
     darkTheme
   );
@@ -105,12 +102,49 @@ if (selectedTheme) {
   );
 }
 
-// Activate / deactivate the theme manually with the button
 themeButton.addEventListener("click", () => {
-  // Add or remove the dark / icon theme
   document.body.classList.toggle(darkTheme);
   themeButton.classList.toggle(iconTheme);
-  // We save the theme and the current icon that the user chose
+
   localStorage.setItem("selected-theme", getCurrentTheme());
-  localStorage.setItem("selected-icon", getCurrentIcon());
+  localStorage.setItem("selected-icon", getcurrentIcon());
+});
+
+/*reduce teh size and print on an a4 sheet */
+function scaleCv() {
+  document.body.classList.add("scale-cv");
+}
+
+// after download remove scale cv
+function removeScale() {
+  document.body.classList.remove("scale-cv");
+}
+
+/* ==================generate pdf ==============*/
+//pdf generate area
+let areaCv = document.getElementById("area-cv");
+
+let resumeButton = document.getElementById("resume-button");
+
+//html2pdf options
+let opt = {
+  margin: 0,
+  filename: "myResume.pdf",
+  image: { type: "jpeg", quality: 0.98 },
+  html2canvas: { scale: 4 },
+  jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
+};
+
+//function to call areaCv and Html2pdf options
+function generateResume() {
+  html2pdf(areaCv, opt);
+}
+
+//when button is clicked , it executes three functions
+//add scale cv pdf generated scale-cv removed
+resumeButton.addEventListener("click", () => {
+  scaleCv();
+  generateResume();
+  //remove scale cv after 5s to return to normal
+  setTimeout(removeScale, 5000);
 });
