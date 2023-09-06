@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+    <script>
+        document.addEventListener("DOMContentLoaded",function (){
+            //when dom content is loaded submit button should be disabled
+            document.querySelector("#submit").disabled = true;
+            document.querySelector("#task").onkeyup = () => {
+                if (document.querySelector("#task").value.length>0){
+                    document.querySelector("#submit").disabled = false;
+                }
+                else{
+                    document.querySelector("#submit").disabled = true;
+                }
+            }
+            document.querySelector("form").onsubmit = function (){
+                let new_task = document.querySelector("#task").value;
+                console.log(new_task);
+                const li = document.createElement("li");
+                li.innerHTML = new_task;
+                document.querySelector('#tasks').append(li);
+
+                //now clear the input field
+                document.querySelector("#task").value = "";
+                document.querySelector("#submit").disabled = true;
+                //stop form from submitting
+                return false;  //don't submit form we will do everything client side
+            }
+        })
+    </script>
+</head>
+<body>
+    <h1>Tasks</h1>
+    <ul id="tasks">
+        
+    </ul>
+    <form action="">
+        <input type="text" name="task" id="task" placeholder="new task">
+        <input type="submit" id="submit" value="successfully submitted">
+    </form>
+</body>
+</html>
