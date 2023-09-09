@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>exchange</title>
+    <script>
+      const weather = {
+        success: true,
+        timestamp: 1694014623,
+        base: "EUR",
+        date: "2023-09-06",
+        rates: {
+          AED: 3.935563,
+          AFN: 85.717515,
+          ALL: 107.469198,
+          AMD: 413.406168,
+          ANG: 1.929515,
+          AOA: 887.17952,
+          ARS: 375.040473,
+          AUD: 1.679271,
+          AWG: 9711.180548,
+          AZN: 1.820558,
+          BAM: 1.950054,
+          BBD: 2.161789,
+          BDT: 117.503739,
+          BGN: 1.956584,
+          BHD: 0.403922,
+          BIF: 3040.839177,
+          BMD: 1.071473,
+          BND: 1.457877,
+          BOB: 7.39782,
+          BRL: 5.329399,
+          BSD: 1.070725,
+          BTC: 4.1854994e-5,
+          BTN: 89.014522,
+          BWP: 14.686448,
+          BYN: 2.702486,
+          BYR: 21000.862535,
+          BZD: 2.15813,
+          CAD: 1.46338,
+          CDF: 2700.110632,
+          CHF: 0.95623,
+          CLF: 0.033928,
+          CLP: 936.177931,
+          CNY: 7.839993,
+          COP: 4381.037078,
+          CRC: 573.979132,
+          CUC: 1.071473,
+          CUP: 28.394023,
+          CVE: 110.629614,
+          CZK: 24.272085,
+          DJF: 190.634678,
+          DKK: 7.457986,
+          DOP: 60.913295,
+          DZD: 146.82389,
+          EGP: 33.097925,
+          ERN: 16.072089,
+          ETB: 59.039649,
+          EUR: 1,
+          FJD: 2.436903,
+          FKP: 0.851691,
+          GBP: 0.857371,
+          GEL: 2.807448,
+          GGP: 0.851691,
+          GHS: 12.268334,
+          GIP: 0.851691,
+          GMD: 64.771162,
+          GNF: 9238.77424,
+          GTQ: 8.425738,
+          GYD: 223.998422,
+          HKD: 8.403538,
+          HNL: 26.722857,
+          HRK: 7.374732,
+          HTG: 146.146606,
+          HUF: 389.919543,
+          IDR: 16434.29998,
+          ILS: 4.098865,
+          IMP: 0.851691,
+          INR: 89.160072,
+          IQD: 1403.629078,
+          IRR: 45296.503068,
+          ISK: 143.930666,
+          JEP: 0.851691,
+          JMD: 165.56901,
+          JOD: 0.758574,
+          JPY: 158.215769,
+          KES: 156.381676,
+          KGS: 94.579261,
+          KHR: 4457.325721,
+          KMF: 495.106697,
+          KPW: 964.376956,
+          KRW: 1430.159077,
+          KWD: 0.330547,
+          KYD: 0.892254,
+          KZT: 496.856586,
+          LAK: 21030.328611,
+          LBP: 16350.671621,
+          LKR: 345.844408,
+          LRD: 199.561639,
+          LSL: 20.529123,
+          LTL: 3.16378,
+          LVL: 0.648123,
+          LYD: 5.191301,
+          MAD: 10.914554,
+          MDL: 19.137623,
+          MGA: 4794.839945,
+          MKD: 61.528306,
+          MMK: 2248.432337,
+          MNT: 3722.333685,
+          MOP: 8.647872,
+          MRO: 382.515526,
+          MUR: 48.380794,
+          MVR: 16.565207,
+          MWK: 1125.59608,
+          MXN: 18.838792,
+          MYR: 5.003345,
+          MZN: 67.770587,
+          NAD: 20.529334,
+          NGN: 811.833237,
+          NIO: 39.194331,
+          NOK: 11.504889,
+          NPR: 142.424984,
+          NZD: 1.824235,
+          OMR: 0.412542,
+          PAB: 1.07059,
+          PEN: 3.945699,
+          PGK: 3.87219,
+          PHP: 61.071257,
+          PKR: 328.942274,
+          PLN: 4.576001,
+          PYG: 7775.687423,
+          QAR: 3.901233,
+          RON: 4.962204,
+          RSD: 117.296259,
+          RUB: 105.21763,
+          RWF: 1280.409731,
+          SAR: 4.018854,
+          SBD: 9.045794,
+          SCR: 13.77917,
+          SDG: 644.103557,
+          SEK: 11.920839,
+          SGD: 1.461462,
+          SHP: 1.303715,
+          SLE: 23.982471,
+          SLL: 21161.583688,
+          SOS: 610.203778,
+          SSP: 643.955038,
+          SRD: 41.227091,
+          STD: 22177.319077,
+          SYP: 13930.75073,
+          SZL: 20.529518,
+          THB: 38.154841,
+          TJS: 11.761322,
+          TMT: 3.750154,
+          TND: 3.338741,
+          TOP: 2.567516,
+          TRY: 28.737327,
+          TTD: 7.25126,
+          TWD: 34.252296,
+          TZS: 2684.038933,
+          UAH: 39.560385,
+          UGX: 3993.232718,
+          USD: 1.071473,
+          UYU: 40.440829,
+          UZS: 13013.034872,
+          VEF: 3478774.306221,
+          VES: 35.249815,
+          VND: 25779.630235,
+          VUV: 130.011162,
+          WST: 2.940242,
+          XAF: 654.017529,
+          XAG: 0.046391,
+          XAU: 0.000559,
+          XCD: 2.895708,
+          XDR: 0.805013,
+          XOF: 653.060864,
+          XPF: 119.68629,
+          YER: 268.24349,
+          ZAR: 20.606986,
+          ZMK: 9644.550136,
+          ZMW: 22.027957,
+          ZWL: 345.013733,
+        },
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        //fetching data from api
+
+        // let endpoint = "latest";
+        // let access_key = "69023e44195808c7000c136586f8e0fb";
+        // fetch(
+        //   "http://api.exchangeratesapi.io/v1/latest?access_key=69023e44195808c7000c136586f8e0fb"
+        // )
+        //   .then(function (response) {
+        //     return response.json();
+        //   })
+        //   .then((data) => console.log(data))
+        //   .catch((error) => {
+        //     console.log("error: ", error);
+        //   });
+
+        const userinp = document.querySelectorAll(".curinp");
+        console.log(userinp);
+        const first = document.querySelector("#to");
+        const second = document.querySelector("#from");
+        const submit = document.querySelectorAll(".submit");
+        console.log("submit part");
+        console.log(submit);
+        const third = document.querySelector("#amount");
+        console.log(submit);
+        submit.forEach((element) => {
+          element.disabled = true;
+        });
+        // submit.disabled = true;
+        userinp.forEach((elements) => {
+          elements.addEventListener("keyup", () => {
+            if (elements === userinp[2]) {
+              console.log(third);
+              if (third.value.length > 0) {
+                submit[1].disabled = false;
+              } else {
+                submit[1].disabled = true;
+              }
+              // console.log(userinp[2]);
+              const amount = document.querySelector("amount");
+              console.log(amount);
+            }
+
+            if (first.value.length > 0 && second.value.length > 0) {
+              for (let i = 0; i < submit.length - 1; i++) {
+                submit[i].disabled = false;
+              }
+            } else {
+              for (let i = 0; i < submit.length - 1; i++) {
+                submit[i].disabled = true;
+              }
+            }
+          });
+        });
+
+        document.querySelector(".form2").onsubmit = () => {
+          // event.preventDefault();
+          // document.querySelector(".form2").prvent;
+          let towhere = localStorage.getItem("towhere");
+          let fromwhere = localStorage.getItem("fromwhere");
+          // let towhere = weather.rates[first.value];
+          // let fromwhere = weather.rates[second.value];
+          console.log(towhere, fromwhere);
+          let valuerate = towhere / fromwhere;
+
+          let toconv = third.value.parseInt;
+          console.log(toconv);
+          let finalvalue = valuerate * toconv;
+          document.querySelector(
+            "#converted"
+          ).innerHTML = `your ${toconv} amounts to ${finalvalue}}`;
+
+          return false;
+        };
+
+        document.querySelector("form").onsubmit = () => {
+          let towhere = weather.rates[first.value];
+          localStorage.setItem("towhere", first.value);
+          let fromwhere = weather.rates[second.value];
+          localStorage.setItem("fromwhere", second.value);
+          console.log(towhere, fromwhere);
+          let valuerate = towhere / fromwhere;
+          document.querySelector(
+            "#showresult"
+          ).innerHTML = `let's get your query! <br> thanks for using our service <br>
+          ${first.value} @ ${towhere} to ${second.value} @ ${fromwhere} rates <br>
+          so 1 ${second.value} = ${valuerate} ${first.value}`;
+
+          //clearing input field
+          first.value = "";
+          second.value = "";
+
+          // first.style.userinp.forEach((element) => {});
+          return false; //this code ensures local opration
+        };
+      });
+    </script>
+    scr
+  </head>
+  <body>
+    <form action="#" data-visible="true">
+      <label for="to">to:: </label>
+      <input type="text" name="to" id="to" class="curinp" />
+      <label for="from">from:: </label>
+      <input type="text" name="from" id="from" class="curinp" />
+      <input type="submit" value="convert" class="submit" />
+      <div id="showresult"></div>
+    </form>
+    ---------------------------------------------------------------- <br />
+    <form action="#">
+      <label for="fromamount">enter amount from</label>
+      <input type="number" name="from" id="fromamount" class="curinp" />
+      <input
+        type="submit"
+        value="get amount"
+        class="submit form2"
+        id="amount"
+      />
+    </form>
+    <div id="converted"></div>
+    <div class="btnarea">
+      <button>retry!</button>
+    </div>
+  </body>
+</html>
+
+<!-- // set endpoint and your API key
+endpoint = 'convert';
+access_key = 'API_KEY';
+
+// define from currency, to currency, and amount
+from = 'EUR';
+to = 'GBP';
+amount = '10';
+
+// execute the conversion using the "convert" endpoint:
+$.ajax({
+    url: 'https://api.exchangeratesapi.io/v1/' + endpoint + '?access_key=' + access_key +'&from=' + from + '&to=' + to + '&amount=' + amount,
+    dataType: 'jsonp',
+    success: function(json) {
+
+        // access the conversion result in json.result
+        alert(json.result);
+
+    }
+}); -->
