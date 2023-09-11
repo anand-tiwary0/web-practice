@@ -25,12 +25,8 @@
     src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
   ></script>
   <script>
-    const heading = React.createElement(
-      "h1",
-      {},
-      "hello react world this is first react code"
-    );
-    //this is root where my react code will run
+    const heading = React.createElement("h1", {}, "this is react code");
+
     const root = ReactDOM.createRoot(document.querySelector(".root"));
     root.render(heading);
   </script>
